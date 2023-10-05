@@ -11,6 +11,7 @@
 		FBA538192A8D55D200D812C9 /* Algorithms_Basics.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBA538232A8D55FB00D812C9 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA538222A8D55FB00D812C9 /* BinarySearch.swift */; };
 		FBA538252A8D576500D812C9 /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA538242A8D576500D812C9 /* BinarySearchTests.swift */; };
+		FBE7335C2ACE3C650099CBCB /* SelectionSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7335B2ACE3C650099CBCB /* SelectionSortTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		FBA538122A8D55D200D812C9 /* Algorithms-BasicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algorithms-BasicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA538222A8D55FB00D812C9 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		FBA538242A8D576500D812C9 /* BinarySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
+		FBE7335B2ACE3C650099CBCB /* SelectionSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSortTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA538242A8D576500D812C9 /* BinarySearchTests.swift */,
+				FBE7335B2ACE3C650099CBCB /* SelectionSortTests.swift */,
 			);
 			path = "Algorithms-BasicsTests";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE7335C2ACE3C650099CBCB /* SelectionSortTests.swift in Sources */,
 				FBA538252A8D576500D812C9 /* BinarySearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
