@@ -2,27 +2,20 @@
 import XCTest
 
 enum SelectionSort {
-    static func sort(_ array: [Int]) -> [Int] {
-        var originalCopy = array
-        var newArray = [Int]()
-        
-        for _ in 0..<originalCopy.count {
-            let smallestIndex = Self.findSmallest(originalCopy)
-            newArray.append(array[smallestIndex])
-            originalCopy.remove(at: smallestIndex)
-        }
-        
-        return newArray
-    }
-    
-    static func findSmallest(_ array: [Int]) -> Int {
-        var smallestIndex = 0
-        for i in 1..<array.count {
-            if array[i] < array[smallestIndex] {
-                smallestIndex = i
+    static func sort(_ array: inout [Int]) {
+        let n = array.count
+        for i in 0..<n {
+            var minIndex = i
+            for j in i+1..<n {
+                if array[j] < array[minIndex] {
+                    minIndex = j
+                }
+            }
+            
+            if minIndex != i {            
+                array.swapAt(minIndex, i)
             }
         }
-        return smallestIndex
     }
 }
 
@@ -35,11 +28,12 @@ final class SelectionSortTests: XCTestCase {
             (unsortedArray: [3,2,1,0], expected: [0,1,2,3]),
         ]
         samples.forEach { (unsortedArray, expectedArray) in
-            let sut: (([Int]) -> [Int]) = SelectionSort.sort
+            var unsortedArray = unsortedArray
+            let sut: ((inout [Int]) -> Void) = SelectionSort.sort
             
-            let sortedArray = sut(unsortedArray)
+            sut(&unsortedArray)
             
-            XCTAssertEqual(sortedArray, expectedArray, "expected \(expectedArray) but got \(sortedArray)")
+            XCTAssertEqual(unsortedArray, expectedArray, "expected \(expectedArray) but got \(unsortedArray)")
         }
     }
 }
