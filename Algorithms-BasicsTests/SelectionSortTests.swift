@@ -3,6 +3,7 @@ import XCTest
 
 enum SelectionSort {
     static func sort(_ array: inout [Int]) {
+        
     }
 }
 
