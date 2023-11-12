@@ -25,7 +25,7 @@ final class SelectionSortTests: XCTestCase {
             (unsortedArray: [], expected: []),
             (unsortedArray: [0], expected: [0]),
             (unsortedArray: [1,0], expected: [0,1]),
-//            (unsortedArray: [3,2,1,0], expected: [0,1,2,3]),
+            (unsortedArray: [3,2,1,0], expected: [0,1,2,3]),
         ]
         samples.forEach { (unsortedArray, expectedArray) in
             var unsortedArray = unsortedArray
