@@ -15,7 +15,7 @@ fileprivate func countItems(_ node: Node) -> Int {
     return node.item + countItems(next)
 }
 
-class Node {
+fileprivate class Node {
     let item: Int
     var next: Node?
     
@@ -23,6 +23,13 @@ class Node {
         self.item = item
         self.next = next
     }
+}
+    
+fileprivate func findMaximumNumber(_ current: Node, maximum: Node) -> Int {
+    guard let nextNode = current.next else {
+        return maximum.item > current.item ? maximum.item : current.item
+    }
+    return findMaximumNumber(nextNode, maximum: maximum.item > current.item ? maximum : current)
 }
 
 final class RecursionTests: XCTestCase {
@@ -45,5 +52,12 @@ final class RecursionTests: XCTestCase {
         let list = Node(item: 1, next: Node(item: 2, next: Node(item: 3)))
         
         XCTAssertEqual(sut(list), 3)
+    }
+    
+    func test_findMaximumNumberInList() {
+        let sut = findMaximumNumber
+        let list = Node(item: 1, next: Node(item: 2, next: Node(item: 3)))
+        
+        XCTAssertEqual(sut(list, list), 3)
     }
 }
