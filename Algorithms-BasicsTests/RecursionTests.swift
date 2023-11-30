@@ -60,4 +60,45 @@ final class RecursionTests: XCTestCase {
         
         XCTAssertEqual(sut(list, list), 3)
     }
+    
+    func test_binarySearchRecursive() {
+        let array = [0,1,2,3,4,5,6]
+        let samples: [((array: [Int], search: Int), expected: Int?)] = [
+            ((array: array, search: -1), .none),
+            ((array: array, search: 3), 3),
+            ((array: array, search: 1), 1),
+            ((array: array, search: 5), 5),
+            ((array: array, search: 4), 4),
+            ((array: array, search: 6), 6),
+            ((array: array, search: 2), 2),
+            ((array: array, search: 0), 0),
+        ]
+        
+        let sut = binarySearch
+        
+        samples.forEach { sample in
+            let result = sut(sample.0.array, sample.0.search)
+            let expected = sample.expected
+            XCTAssertEqual(result, expected, "Expected \(String(describing: expected)), got \(String(describing: result))")
+        }
+    }
+}
+
+
+fileprivate func binarySearch(array: [Int], find search: Int) -> Int? {
+    guard !array.isEmpty else { return .none }
+    
+    let midIndex = array.endIndex / 2
+    let midValue = array[midIndex]
+    
+    if midValue == search {
+        return midIndex
+    } else if search < midValue {
+        return binarySearch(array: Array(array[0..<midIndex]), find: search)
+    } else {
+        guard let result = binarySearch(array: Array(array[midIndex..<array.endIndex]), find: search) else {
+            return .none
+        }
+        return result + midIndex
+    }
 }
