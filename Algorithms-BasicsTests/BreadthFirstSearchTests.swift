@@ -100,7 +100,7 @@ fileprivate class BreadthFirstSearchMangoSeller {
     }
     
     private func isSeller(_ name: String) -> Bool {
-        return name == "anuj"
+        return name == "jonny"
     }
 }
 
@@ -119,9 +119,9 @@ final class BreadthFirstSearchTests: XCTestCase {
         
         let sut = BreadthFirstSearchMangoSeller()
         
-        XCTAssertEqual("anuj", sut.isThereMangoSeller(from: graph, startingFrom: "you"))
+        XCTAssertEqual("jonny", sut.isThereMangoSeller(from: graph, startingFrom: "you"))
         
-        XCTAssertEqual("anuj", sut.isThereMangoSeller(from: graph, startingFrom: "you"))
+        XCTAssertEqual("jonny", sut.isThereMangoSeller(from: graph, startingFrom: "you"))
     }
 
 }
