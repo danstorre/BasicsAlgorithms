@@ -55,6 +55,7 @@ fileprivate class BreadthFirstSearchMangoSeller {
     private var searchedPeople = [String]()
     
     func isThereMangoSeller(from graph: [String: [String]], startingFrom person: String) -> String? {
+        reset()
         enqueueConnectionsToSearchOf(person: person, from: graph)
         
         while let nextPerson = searchQueue.nextPerson() {
@@ -105,7 +106,7 @@ fileprivate class BreadthFirstSearchMangoSeller {
 
 final class BreadthFirstSearchTests: XCTestCase {
 
-    func test_findShortestPath_inGraph() {
+    func test_isThereMangoSeller_inGraph_DoneTwice_DeliversTheFirstMangoSeller() {
         var graph = [String: [String]]()
         graph["you"] = ["alice", "bob", "claire"]
         graph["bob"] = ["anuj", "peggy"]
@@ -117,6 +118,8 @@ final class BreadthFirstSearchTests: XCTestCase {
         graph["jonny"] = []
         
         let sut = BreadthFirstSearchMangoSeller()
+        
+        XCTAssertEqual("anuj", sut.isThereMangoSeller(from: graph, startingFrom: "you"))
         
         XCTAssertEqual("anuj", sut.isThereMangoSeller(from: graph, startingFrom: "you"))
     }
