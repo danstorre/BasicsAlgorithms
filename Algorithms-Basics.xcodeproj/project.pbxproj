@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB5333012B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5333002B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift */; };
 		FBA538132A8D55D200D812C9 /* Algorithms_Basics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA5380A2A8D55D200D812C9 /* Algorithms_Basics.framework */; };
 		FBA538192A8D55D200D812C9 /* Algorithms_Basics.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBA538232A8D55FB00D812C9 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA538222A8D55FB00D812C9 /* BinarySearch.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB5333002B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadthFirstSearchTests.swift; sourceTree = "<group>"; };
 		FBA5380A2A8D55D200D812C9 /* Algorithms_Basics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithms_Basics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithms_Basics.h; sourceTree = "<group>"; };
 		FBA538122A8D55D200D812C9 /* Algorithms-BasicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algorithms-BasicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				FBE7335B2ACE3C650099CBCB /* SelectionSortTests.swift */,
 				FBA7605E2B14E56D0019DA5A /* RecursionTests.swift */,
 				FBED4D272B1EA6940002091F /* QuickSortTests.swift */,
+				FB5333002B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift */,
 			);
 			path = "Algorithms-BasicsTests";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE7335C2ACE3C650099CBCB /* SelectionSortTests.swift in Sources */,
+				FB5333012B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift in Sources */,
 				FBA7605F2B14E56D0019DA5A /* RecursionTests.swift in Sources */,
 				FBA538252A8D576500D812C9 /* BinarySearchTests.swift in Sources */,
 				FBED4D282B1EA6940002091F /* QuickSortTests.swift in Sources */,
