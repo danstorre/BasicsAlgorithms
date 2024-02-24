@@ -58,13 +58,13 @@ fileprivate class BreadthFirstSearchMangoSeller {
         reset()
         enqueueConnectionsToSearchOf(person: person, from: graph)
         
-        while let nextPerson = searchQueue.nextPerson() {
-            guard !hasBeenSearched(person: nextPerson) else { continue }
+        while let currentSearchedPerson = searchQueue.nextPerson() {
+            guard !hasBeenSearched(person: currentSearchedPerson) else { continue }
             
-            if isSeller(nextPerson) {
-                return nextPerson
+            if isSeller(currentSearchedPerson) {
+                return currentSearchedPerson
             } else {
-                enqueueConnectionsToSearchOf(person: nextPerson, from: graph)
+                enqueueConnectionsToSearchOf(person: currentSearchedPerson, from: graph)
             }
         }
         
