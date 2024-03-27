@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2D39DC2BB4AC000011E889 /* DijsktraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D39DB2BB4AC000011E889 /* DijsktraTests.swift */; };
 		FB5333012B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5333002B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift */; };
 		FBA538132A8D55D200D812C9 /* Algorithms_Basics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA5380A2A8D55D200D812C9 /* Algorithms_Basics.framework */; };
 		FBA538192A8D55D200D812C9 /* Algorithms_Basics.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB2D39DB2BB4AC000011E889 /* DijsktraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DijsktraTests.swift; sourceTree = "<group>"; };
 		FB5333002B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadthFirstSearchTests.swift; sourceTree = "<group>"; };
 		FBA5380A2A8D55D200D812C9 /* Algorithms_Basics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithms_Basics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithms_Basics.h; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				FBA7605E2B14E56D0019DA5A /* RecursionTests.swift */,
 				FBED4D272B1EA6940002091F /* QuickSortTests.swift */,
 				FB5333002B5DB19A004FD3C6 /* BreadthFirstSearchTests.swift */,
+				FB2D39DB2BB4AC000011E889 /* DijsktraTests.swift */,
 			);
 			path = "Algorithms-BasicsTests";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				FBA7605F2B14E56D0019DA5A /* RecursionTests.swift in Sources */,
 				FBA538252A8D576500D812C9 /* BinarySearchTests.swift in Sources */,
 				FBED4D282B1EA6940002091F /* QuickSortTests.swift in Sources */,
+				FB2D39DC2BB4AC000011E889 /* DijsktraTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
